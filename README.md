@@ -1,46 +1,81 @@
-# Getting Started with Create React App
+# Bookstore React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Bookstore React Application! This project allows you to explore a variety of books, add them to your cart, and view details about authors associated with the bookstore.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+To run this project locally, follow these steps:
 
-### `npm start`
+1. Clone the repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+   ```bash
+   git clone https://github.com/SeanThakur/bookstore.git
+   cd bookstore
+   ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Install dependencies:
 
-### `npm test`
+   ```bash
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Start the development server:
 
-### `npm run build`
+   ```bash
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Open your browser and navigate to http://localhost:3000 to view the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Overview
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Login Page
 
-### `npm run eject`
+![Alt text](<src/assets/image/Screenshot 2023-12-06 at 1.03.56 AM.png>)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Home Page
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Alt text](<src/assets/image/Screenshot 2023-12-06 at 1.03.01 AM.png>)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. Books Page
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Alt text](<src/assets/image/Screenshot 2023-12-06 at 1.03.11 AM.png>)
 
-## Learn More
+5. Book details Page
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Alt text](<src/assets/image/Screenshot 2023-12-06 at 1.03.22 AM.png>)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+6. Author Page
+
+![Alt text](<src/assets/image/Screenshot 2023-12-06 at 1.03.35 AM.png>)
+
+7. Author detail Page
+
+![Alt text](<src/assets/image/Screenshot 2023-12-06 at 1.03.47 AM.png>)
+
+8. Shopping cart Page
+
+![Alt text](<src/assets/image/Screenshot 2023-12-06 at 1.04.24 AM.png>)
+
+The Bookstore React Application is a multi-page React application designed to manage a bookstore. It features:
+
+- Navigation bar for easy access to different sections (Home, Books, Authors).
+- Home Page welcoming users to the bookstore with a featured book section.
+- Books Page listing all available books with filtering options by genre.
+- Authors Page displaying all authors associated with the bookstore, along with their best selling books.
+- Carts page shows the list of the books that user want to make purchase.
+- Cart Page is protected for authenticated users only.
+
+## Notes
+
+### Authentication Module
+
+- The authentication system in this application is static, allowing users to log in with any username and password combination. Authentication persists across page refreshes.
+
+### Cart Information
+
+- Please note that the cart information is not stored persistently. Upon refreshing the page, the cart contents will be reset.
+
+### Mobile View
+
+- This application is optimized for desktop view and may not provide an optimal experience on mobile devices. Mobile view optimization is not implemented.
