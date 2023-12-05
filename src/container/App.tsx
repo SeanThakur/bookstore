@@ -10,6 +10,7 @@ import AuthorDetail from "../pages/AuthorDetails";
 import Login from "../pages/Login";
 import Nav from "../components/Nav";
 import NotFound from "../components/NotFound";
+import ProtectedRoute from "../Navigation/ProtectedRoute";
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
         <Routes>
           <Route path="/" Component={Home} />
           <Route path="/login" Component={Login} />
-          <Route path="/cart" Component={Cart} />
+          <Route element={<ProtectedRoute />}>
+            <Route path="/cart" element={<Cart />} />
+          </Route>
           <Route path="/books" Component={Books} />
           <Route path="/book/:id" Component={BookDetails} />
           <Route path="/authors" Component={Authors} />
