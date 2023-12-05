@@ -27,6 +27,15 @@ To run this project locally, follow these steps:
 
 4. Open your browser and navigate to http://localhost:3000 to view the application.
 
+## Technologies Used
+
+The Bookstore React Application is built using the following technologies:
+
+- [React](https://reactjs.org/): A JavaScript library for building user interfaces.
+- [React Router](https://reactrouter.com/): Declarative routing for React applications.
+- [Redux](https://redux.js.org/): A predictable state container for JavaScript apps.
+- [TypeScript](https://www.typescriptlang.org/): A strongly typed superset of JavaScript for better development experiences.
+
 ## Overview
 
 1. Login Page
