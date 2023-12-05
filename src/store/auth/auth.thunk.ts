@@ -11,6 +11,7 @@ export const login = dispatchable(({ username }) => {
   return async (dispatch: Dispatch<Action>) => {
     try {
       dispatch(actions["auth/login"](username));
+      localStorage.setItem("isLoggedIn", "true");
       return {
         success: true,
       };
@@ -26,6 +27,7 @@ export const logout = dispatchable(({ user }) => {
   return async (dispatch: Dispatch<Action>) => {
     try {
       dispatch(actions["auth/logout"](user));
+      localStorage.removeItem("isLoggedIn");
       return {
         success: true,
       };

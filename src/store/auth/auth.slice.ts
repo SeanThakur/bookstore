@@ -2,9 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 import { AuthState } from "./auth.entity";
 import authReducer from "./auth.reducer";
 
+const isLoggedIn = localStorage.getItem("isLoggedIn");
+
 export const initialState: AuthState = {
   auth: {
-    isAuth: false,
+    isAuth: isLoggedIn ? true : false,
   },
 };
 

@@ -1,16 +1,21 @@
 import React from "react";
 import "./styles.css";
-import { actions } from "../../../store/root.store";
-import { useNavigate } from "react-router-dom";
+import { RootState, actions, useAppSelector } from "../../../store/root.store";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Index = () => {
   const navigate = useNavigate();
+  const auth = useAppSelector((state: RootState) => state.auth.auth);
 
   const onLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await actions.auth.login("adsf");
+    await actions.auth.login("true");
     navigate("/");
   };
+
+  if (auth.isAuth) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <div className="login-container">

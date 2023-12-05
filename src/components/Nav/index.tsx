@@ -16,7 +16,7 @@ const Nav = () => {
   };
 
   const logout = async () => {
-    await actions.auth.logout("");
+    await actions.auth.logout("false");
     onAuthClick();
   };
 
