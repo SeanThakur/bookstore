@@ -18,9 +18,9 @@ const FilterBy: React.FC<FilterByProps> = ({
       <label htmlFor="author">{title}</label>
       <select id="author" onChange={handleChange}>
         <option value="">All {name}</option>
-        {data.map((author) => (
-          <option key={author} value={author}>
-            {author}
+        {data.map((item) => (
+          <option key={item} value={item}>
+            {item}
           </option>
         ))}
       </select>

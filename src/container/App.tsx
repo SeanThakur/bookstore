@@ -7,7 +7,9 @@ import Authors from "../pages/Authors";
 import Books from "../pages/Books";
 import BookDetails from "../pages/BookDetails";
 import AuthorDetail from "../pages/AuthorDetails";
+import Login from "../pages/Login";
 import Nav from "../components/Nav";
+import NotFound from "../components/NotFound";
 
 function App() {
   return (
@@ -16,11 +18,13 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" Component={Home} />
+          <Route path="/login" Component={Login} />
           <Route path="/cart" Component={Cart} />
           <Route path="/books" Component={Books} />
           <Route path="/book/:id" Component={BookDetails} />
           <Route path="/authors" Component={Authors} />
           <Route path="/author/:name" Component={AuthorDetail} />
+          <Route path="*" Component={NotFound} />
         </Routes>
       </Router>
     </Fragment>

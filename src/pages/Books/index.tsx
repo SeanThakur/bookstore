@@ -4,14 +4,17 @@ import FilterBy from "../../components/Book/FilterBy";
 import "./styles.css";
 import { booksType } from "../../typings/dtos";
 import { booksData } from "../../services/bookData";
+import { genreData } from "../../services/genreData";
+import { getNames } from "../../helpers/utils";
 
 const Books = () => {
-  const genres: string[] = ["Ficton", "Drama", "Science"];
-  const author: string[] = ["alksdf", "adsf"];
+  const [genres, setGenres] = useState<string[]>([]);
 
   const [books, setBookData] = useState<booksType[]>([]);
 
   useEffect(() => {
+    const genreNames = getNames(genreData);
+    setGenres(genreNames);
     setBookData(booksData);
   }, []);
 
@@ -19,23 +22,15 @@ const Books = () => {
     event: React.ChangeEvent<HTMLSelectElement>
   ): void => {
     const selectedGenre: string = event.target.value;
-    // if (selectedGenre === '') {
-    //   setFilteredBooks(books);
-    // } else {
-    //   const filtered = books.filter((book) => book.genre === selectedGenre);
-    //   setFilteredBooks(filtered);
-    // }
-  };
-
-  const handleAuthorChange = (
-    event: React.ChangeEvent<HTMLSelectElement>
-  ): void => {
-    const selectedGenre: string = event.target.value;
-    // if (selectedGenre === '') {
-    //   setFilteredBooks(books);
-    // } else {
-    //   const filtered = books.filter((book) => book.genre === selectedGenre);
-    //   setFilteredBooks(filtered);
+    if (selectedGenre === "") {
+      setBookData(booksData);
+    } else {
+      const findGenre = genreData.find((item) => item.name === selectedGenre);
+      const filtered = booksData.filter(
+        (book) => book.genre_id === findGenre?.id
+      );
+      setBookData(filtered);
+    }
   };
 
   return (
@@ -49,12 +44,6 @@ const Books = () => {
             data={genres}
             handleChange={handleGenreChange}
           />
-          <FilterBy
-            name="Author"
-            title="Filter by Author:"
-            data={author}
-            handleChange={handleAuthorChange}
-          />
         </div>
       </div>
       <div className="books-collection">
@@ -66,6 +55,7 @@ const Books = () => {
             description={item.describe}
             image={item.cover_image}
             price={item.price}
+            genre_id={item.genre_id}
           />
         ))}
       </div>

@@ -1,0 +1,35 @@
+.login-container {
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.login-form button {
+  padding: 8px 12px;
+  background-color: #e60024;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.login-form button:hover {
+  background-color: #c80b27;
+}
+
+.login-note {
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+}

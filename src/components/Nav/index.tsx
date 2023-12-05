@@ -9,6 +9,10 @@ const Nav = () => {
     navigate("/");
   };
 
+  const onAuthClick = () => {
+    navigate("/login");
+  };
+
   return (
     <nav className="nav">
       <h4 onClick={onNavClick} className="nav-title">
@@ -22,7 +26,9 @@ const Nav = () => {
           Authors
         </Link>
       </div>
-      <button className="login-button">Login for free</button>
+      <button className="login-button" onClick={onAuthClick}>
+        Login To Buy
+      </button>
     </nav>
   );
 };

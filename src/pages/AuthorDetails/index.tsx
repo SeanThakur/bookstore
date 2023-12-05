@@ -44,6 +44,7 @@ const Index = () => {
                 description={item.describe}
                 image={item.cover_image}
                 price={item.price}
+                genre_id={item.genre_id}
               />
             ))}
           </div>

@@ -33,9 +33,14 @@ export interface booksProps {
   price: number;
   description: string;
   image: string;
+  genre_id: number;
 }
 
 export interface bookDetailsProps extends booksType {
   author: string;
   genre: string;
 }
+
+export type CommonType = {
+  name: string;
+};
