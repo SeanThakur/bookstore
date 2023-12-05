@@ -1,11 +1,11 @@
 import React, { Fragment, useEffect, useState } from "react";
-import Book from "../../components/Book";
-import FilterBy from "../../components/Book/FilterBy";
 import "./styles.css";
-import { booksType } from "../../typings/dtos";
-import { booksData } from "../../services/bookData";
-import { genreData } from "../../services/genreData";
-import { getNames } from "../../helpers/utils";
+import { booksType } from "typings/dtos";
+import { getNames } from "helpers/utils";
+import { booksData } from "services/bookData";
+import { genreData } from "services/genreData";
+import FilterBy from "components/Book/FilterBy";
+import Book from "components/Book";
 
 const Books = () => {
   const [genres, setGenres] = useState<string[]>([]);

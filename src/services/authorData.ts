@@ -1,4 +1,4 @@
-import { authorType } from "../typings/dtos";
+import { authorType } from "typings/dtos";
 
 export const authorData: authorType[] = [
   {

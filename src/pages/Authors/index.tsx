@@ -1,9 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./styles.css";
-
-import Author from "../../components/Author";
-import { authorType } from "../../typings/dtos";
-import { authorData } from "../../services/authorData";
+import { authorType } from "typings/dtos";
+import { authorData } from "services/authorData";
+import Author from "components/Author";
 
 const Authors = () => {
   const [authors, setAuthorData] = useState<authorType[]>([]);

@@ -1,10 +1,9 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./styles.css";
-
-import Banner from "../../components/Banner";
-import Book from "../../components/Book";
-import { booksType } from "../../typings/dtos";
-import { booksData } from "../../services/bookData";
+import Banner from "components/Banner";
+import { booksData } from "services/bookData";
+import { booksType } from "typings/dtos";
+import Book from "components/Book";
 
 const Home = () => {
   const [books, setBookData] = useState<booksType[]>([]);

@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.css";
-import { authorType } from "../../typings/dtos";
 import { useNavigate } from "react-router-dom";
+import { authorType } from "typings/dtos";
 
-const Index: React.FC<{ data: authorType }> = ({ data }) => {
+const Author: React.FC<{ data: authorType }> = ({ data }) => {
   const navigate = useNavigate();
 
   const onAuthorClick = () => {
@@ -26,4 +26,4 @@ const Index: React.FC<{ data: authorType }> = ({ data }) => {
   );
 };
 
-export default Index;
+export default Author;

@@ -1,4 +1,4 @@
-import { booksType } from "../../typings/dtos";
+import { booksType } from "typings/dtos";
 
 export interface CartEntity extends booksType {
   qty: number;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
-import { RootState, useAppSelector } from "../store/root.store";
+import { RootState, useAppSelector } from "store/root.store";
 
 const ProtectedRoute: React.FC = () => {
   const auth = useAppSelector((state: RootState) => state.auth.auth);

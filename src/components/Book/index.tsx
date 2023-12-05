@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
-import { booksProps } from "../../typings/dtos";
 import { useNavigate } from "react-router-dom";
-import { genreData } from "../../services/genreData";
+import { booksProps } from "typings/dtos";
+import { genreData } from "services/genreData";
 
 const Book = ({
   id,

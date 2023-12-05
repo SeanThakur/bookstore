@@ -1,6 +1,6 @@
 import { Dispatch } from "@reduxjs/toolkit";
 import { actions } from "./auth.slice";
-import { dispatchable } from "../dispatchable";
+import { dispatchable } from "store/dispatchable";
 
 export type Action = {
   type: string;

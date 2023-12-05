@@ -1,12 +1,12 @@
+import BookDetails from "components/Book/Details";
 import React, { Fragment, useEffect, useState } from "react";
-import BookDetails from "../../components/Book/Details";
 import { useParams } from "react-router-dom";
-import { bookDetailsProps } from "../../typings/dtos";
-import { booksData } from "../../services/bookData";
-import { authorData } from "../../services/authorData";
-import { genreData } from "../../services/genreData";
+import { authorData } from "services/authorData";
+import { booksData } from "services/bookData";
+import { genreData } from "services/genreData";
+import { bookDetailsProps } from "typings/dtos";
 
-const Index = () => {
+const BooksDetails = () => {
   let { id } = useParams();
   const [bookDetails, setBookDetails] = useState<bookDetailsProps | undefined>(
     undefined
@@ -42,4 +42,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default BooksDetails;

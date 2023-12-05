@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 import { Link, useNavigate } from "react-router-dom";
-import { RootState, actions, useAppSelector } from "../../store/root.store";
+import { RootState, actions, useAppSelector } from "store/root.store";
 
 const Nav = () => {
   const navigate = useNavigate();

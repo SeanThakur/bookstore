@@ -1,10 +1,10 @@
 import React from "react";
 import "./styles.css";
-import { RootState, actions, useAppSelector } from "../../store/root.store";
-import { authorData } from "../../services/authorData";
-import { genreData } from "../../services/genreData";
 import { Link, useNavigate } from "react-router-dom";
-import { CartEntity } from "../../store/cart/cart.entity";
+import { RootState, actions, useAppSelector } from "store/root.store";
+import { CartEntity } from "store/cart/cart.entity";
+import { authorData } from "services/authorData";
+import { genreData } from "services/genreData";
 
 const ShoppingCart = () => {
   const navigate = useNavigate();

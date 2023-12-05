@@ -1,14 +1,13 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./styles.css";
-
-import AuthorDetail from "../../components/Author/Detail";
-import Book from "../../components/Book";
-import { authorType, booksType } from "../../typings/dtos";
-import { booksData } from "../../services/bookData";
 import { useParams } from "react-router-dom";
-import { authorData } from "../../services/authorData";
+import { authorType, booksType } from "typings/dtos";
+import { authorData } from "services/authorData";
+import { booksData } from "services/bookData";
+import AuthorDetail from "components/Author/Detail";
+import Book from "components/Book";
 
-const Index = () => {
+const AuthorDetails = () => {
   let { name } = useParams();
   const [books, setBookData] = useState<booksType[]>([]);
   const [authorInfo, setAuthorInfo] = useState<authorType | undefined>(
@@ -54,4 +53,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default AuthorDetails;

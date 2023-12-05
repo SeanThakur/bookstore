@@ -1,7 +1,8 @@
 import { Dispatch } from "@reduxjs/toolkit";
 import { actions } from "./cart.slice";
-import { dispatchable } from "../dispatchable";
+
 import { CartEntity } from "./cart.entity";
+import { dispatchable } from "store/dispatchable";
 
 export type Action = {
   type: string;

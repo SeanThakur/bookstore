@@ -1,8 +1,8 @@
 import React from "react";
 import "./styles.css";
 import { Link } from "react-router-dom";
-import { bookDetailsProps } from "../../../typings/dtos";
-import { RootState, actions, useAppSelector } from "../../../store/root.store";
+import { bookDetailsProps } from "typings/dtos";
+import { RootState, actions, useAppSelector } from "store/root.store";
 
 const BookDetails: React.FC<{ data: bookDetailsProps }> = ({ data }) => {
   const auth = useAppSelector((state: RootState) => state.auth.auth);
@@ -14,6 +14,7 @@ const BookDetails: React.FC<{ data: bookDetailsProps }> = ({ data }) => {
         qty: 1,
       };
       await actions.cart.productAdd(cartData);
+      window.alert("Book added to cart");
     } else {
       window.alert("Please login to access cart feature!");
     }

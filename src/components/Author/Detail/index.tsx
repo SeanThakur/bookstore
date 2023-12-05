@@ -1,8 +1,8 @@
 import React from "react";
 import "./styles.css";
-import { authorType } from "../../../typings/dtos";
+import { authorType } from "typings/dtos";
 
-const Index: React.FC<{ data: authorType }> = ({ data }) => {
+const AuthorDetail: React.FC<{ data: authorType }> = ({ data }) => {
   return (
     <div className="authorDetail-container">
       <img
@@ -18,4 +18,4 @@ const Index: React.FC<{ data: authorType }> = ({ data }) => {
   );
 };
 
-export default Index;
+export default AuthorDetail;

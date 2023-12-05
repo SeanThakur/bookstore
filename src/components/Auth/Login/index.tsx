@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.css";
-import { RootState, actions, useAppSelector } from "../../../store/root.store";
 import { Navigate, useNavigate } from "react-router-dom";
+import { RootState, actions, useAppSelector } from "store/root.store";
 
-const Index = () => {
+const Login = () => {
   const navigate = useNavigate();
   const auth = useAppSelector((state: RootState) => state.auth.auth);
 
@@ -33,4 +33,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Login;

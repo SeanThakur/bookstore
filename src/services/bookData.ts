@@ -1,4 +1,4 @@
-import { booksType } from "../typings/dtos";
+import { booksType } from "typings/dtos";
 
 export const booksData: booksType[] = [
   {

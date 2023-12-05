@@ -1,4 +1,4 @@
-import { genreName, genreType } from "../typings/dtos";
+import { genreName, genreType } from "typings/dtos";
 
 export const genreData: genreType[] = [
   { id: 1, name: genreName.ScienceFiction },

@@ -1,9 +1,8 @@
 import React from "react";
 import "./styles.css";
+import Login from "components/Auth/Login";
 
-import Login from "../../components/Auth/Login";
-
-const Index = () => {
+const Authentication = () => {
   return (
     <div className="login-wrapper">
       <Login />
@@ -11,4 +10,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Authentication;
