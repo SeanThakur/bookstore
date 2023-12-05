@@ -1,0 +1,12 @@
+.books-collection {
+  margin: 18px 34px;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.books-collection-title {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 34px;
+}

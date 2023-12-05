@@ -1,0 +1,39 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 18px auto;
+  padding: 0 18px;
+}
+
+.nav-title {
+  cursor: pointer;
+}
+
+.login-button {
+  background-color: #e60024;
+  border: 0.2px solid transparent;
+  border-radius: 18px;
+  padding: 12px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.nav-items {
+}
+
+.nav-item {
+  color: #e60024;
+  margin-right: 18px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.nav-item:hover {
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+}

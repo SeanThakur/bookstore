@@ -1,0 +1,16 @@
+.authorDetail-container {
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  margin: 54px 42px;
+}
+
+.authorDetail-img {
+  height: -webkit-fill-available;
+  object-fit: contain;
+}
+
+.authorDetail-info-wrapper {
+  margin-left: 52px;
+  max-width: 540px;
+}

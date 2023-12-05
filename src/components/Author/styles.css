@@ -1,0 +1,19 @@
+.author-container {
+  display: flex;
+  height: 200px;
+  max-width: 740px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.author-img {
+  height: -webkit-fill-available;
+  object-fit: contain;
+}
+
+.author-info-wrapper {
+  margin-left: 24px;
+  max-width: 450px;
+}

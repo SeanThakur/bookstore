@@ -1,0 +1,10 @@
+.authors-wrapper {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 54px 32px;
+}
+
+.authors-list {
+  margin: 0 32px;
+}

@@ -1,0 +1,20 @@
+.bookDetails-container {
+  display: flex;
+  height: 660px;
+  justify-content: center;
+  margin: 54px 42px;
+}
+
+.bookDetails-img {
+  height: -webkit-fill-available;
+  object-fit: contain;
+}
+
+.bookDetails-info-wrapper {
+  margin-left: 32px;
+}
+
+.bootDetails-cart {
+  min-width: 200px;
+  margin: 34px 0;
+}
