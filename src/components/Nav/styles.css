@@ -22,6 +22,10 @@
   font-weight: 900;
 }
 
+.nav-items {
+  display: flex;
+}
+
 .nav-item {
   color: #e60024;
   margin-right: 18px;
@@ -33,4 +37,8 @@
   color: #000;
   font-size: 18px;
   font-weight: 400;
+}
+
+.logout-link {
+  cursor: pointer;
 }

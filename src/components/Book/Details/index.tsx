@@ -2,8 +2,23 @@ import React from "react";
 import "./styles.css";
 import { Link } from "react-router-dom";
 import { bookDetailsProps } from "../../../typings/dtos";
+import { RootState, actions, useAppSelector } from "../../../store/root.store";
 
 const BookDetails: React.FC<{ data: bookDetailsProps }> = ({ data }) => {
+  const auth = useAppSelector((state: RootState) => state.auth.auth);
+
+  const addProdcutToCart = async () => {
+    if (auth.isAuth) {
+      const cartData = {
+        ...data,
+        qty: 1,
+      };
+      await actions.cart.productAdd(cartData);
+    } else {
+      window.alert("Please login to access cart feature!");
+    }
+  };
+
   return (
     <div className="bookDetails-container">
       <img
@@ -25,7 +40,12 @@ const BookDetails: React.FC<{ data: bookDetailsProps }> = ({ data }) => {
           </p>
         </div>
         <h2>Price: {data.price}$</h2>
-        <button className="login-button bootDetails-cart">Add To Cart</button>
+        <button
+          className="login-button bootDetails-cart"
+          onClick={addProdcutToCart}
+        >
+          Add To Cart
+        </button>
       </div>
     </div>
   );

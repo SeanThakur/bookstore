@@ -7,10 +7,10 @@ export type Action = {
   payload?: any;
 };
 
-export const login = dispatchable(() => {
+export const login = dispatchable(({ username }) => {
   return async (dispatch: Dispatch<Action>) => {
     try {
-      dispatch(actions["auth/login"]);
+      dispatch(actions["auth/login"](username));
       return {
         success: true,
       };
@@ -22,10 +22,10 @@ export const login = dispatchable(() => {
   };
 });
 
-export const logout = dispatchable(() => {
+export const logout = dispatchable(({ user }) => {
   return async (dispatch: Dispatch<Action>) => {
     try {
-      dispatch(actions["auth/logout"]);
+      dispatch(actions["auth/logout"](user));
       return {
         success: true,
       };

@@ -1,9 +1,11 @@
 import React from "react";
 import "./styles.css";
 import { Link, useNavigate } from "react-router-dom";
+import { RootState, actions, useAppSelector } from "../../store/root.store";
 
 const Nav = () => {
   const navigate = useNavigate();
+  const auth = useAppSelector((state: RootState) => state.auth.auth);
 
   const onNavClick = () => {
     navigate("/");
@@ -11,6 +13,11 @@ const Nav = () => {
 
   const onAuthClick = () => {
     navigate("/login");
+  };
+
+  const logout = async () => {
+    await actions.auth.logout("");
+    onAuthClick();
   };
 
   return (
@@ -26,9 +33,20 @@ const Nav = () => {
           Authors
         </Link>
       </div>
-      <button className="login-button" onClick={onAuthClick}>
-        Login To Buy
-      </button>
+      {auth.isAuth ? (
+        <div className="nav-items">
+          <Link className="nav-item" to={"/cart"}>
+            Cart
+          </Link>
+          <div onClick={logout} className="nav-item logout-link">
+            Logout
+          </div>
+        </div>
+      ) : (
+        <button className="login-button" onClick={onAuthClick}>
+          Login To Buy
+        </button>
+      )}
     </nav>
   );
 };
