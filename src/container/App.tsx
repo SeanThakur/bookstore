@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Nav from "components/Nav";
 import NotFound from "components/NotFound";
 import ProtectedRoute from "navigation/ProtectedRoute";
@@ -14,7 +14,7 @@ import Home from "pages/Home";
 function App() {
   return (
     <Fragment>
-      <Router>
+      <HashRouter>
         <Nav />
         <Routes>
           <Route path="/" Component={Home} />
@@ -28,7 +28,7 @@ function App() {
           <Route path="/author/:name" Component={AuthorDetails} />
           <Route path="*" Component={NotFound} />
         </Routes>
-      </Router>
+      </HashRouter>
     </Fragment>
   );
 }
